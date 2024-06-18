@@ -1,0 +1,179 @@
+/*---------------------------------------------------------------------------------------*/
+/*------------ Header style -------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.header {
+  background: #ffffff;
+  padding: 24px 0;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  max-width: 153px;
+}
+
+.right__block {
+  display: flex;
+  align-items: center;
+}
+
+.swither {
+  display: flex;
+  margin-right: clamp(10px, 3vw, 60px);
+}
+.swither a img {
+  width: 28px;
+  margin: 0 5px;
+}
+
+.menu__icon {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  cursor: pointer;
+  border-radius: 16px;
+  background: #000;
+  padding: 14px 24px;
+  width: 119px;
+}
+.menu__icon .text_menu {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.menu__icon span {
+  position: absolute;
+  left: 16px;
+  top: 15px;
+  height: 2px;
+  width: 20px;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+  border-radius: 2px;
+}
+
+.menu__icon::before, .menu__icon::after {
+  position: absolute;
+  left: 16px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+  border-radius: 2px;
+}
+
+.menu__icon::before, .menu__icon::after {
+  content: "";
+}
+
+.menu__icon::before {
+  top: 23px;
+  width: 20px;
+}
+
+.menu__icon::after {
+  bottom: 14px;
+  width: 20px;
+}
+
+.menu__icon._active span {
+  transform: scale(0) translate(0px, -50%);
+}
+
+.menu__icon._active::before {
+  top: 50%;
+  left: 14px;
+  width: 22px;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+
+.menu__icon._active::after {
+  top: 50%;
+  left: 13px;
+  width: 22px;
+  transform: rotate(45deg) translate(0px, -50%);
+}
+
+.header__right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 97px;
+  right: 0;
+  width: 70%;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  background: #fff;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  padding: 20px 20px 80px;
+  width: 100%;
+}
+
+.header__menu .menu__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header__menu .menu__list .menu__link {
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 0;
+  margin-bottom: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.menu__sub-list {
+  width: 100%;
+}
+
+.header__menu .menu__list .menu__link a {
+  color: #000;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu .wd-nav {
+  margin-bottom: 32px;
+}
+
+.header__menu form {
+  margin-right: 0;
+}
+
+._active {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/*=========================================================================================*/
+/*---------------------------- Media queries ----------------------------------------------*/
+/*=========================================================================================*/
+@media screen and (max-width: 414.98px) {
+  .header__logo {
+    max-width: 110px;
+  }
+  .menu__icon {
+    padding: 14px 16px;
+    width: 100px;
+  }
+}/*# sourceMappingURL=header-style.css.map */
