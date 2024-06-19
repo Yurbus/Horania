@@ -50,10 +50,6 @@ body._lock {
   overflow: hidden;
 }
 
-body.lock {
-  overflow: hidden;
-}
-
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -62,20 +58,99 @@ body.lock {
   position: relative;
 }
 
-/*-------------------------------------*/
+/*------------------------------------------------*/
 [class*=__container] {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-/*--------------------------------------*/
+/*-------------------------------------------------*/
 .page {
   flex: 1 1 auto;
   padding-top: 80px;
 }
 
 /*------------- Hero section -----------------------*/
+.section__hero {
+  margin-top: 20px;
+}
+.section__hero .hero__body .media-container {
+  border-radius: 32px;
+  max-height: 720px;
+}
+.section__hero .hero__body .hero__button {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-160px);
+}
+.section__hero .hero__body .hero__button a {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 22px 44px;
+  border-radius: 16px;
+  background: #fff;
+  transition: all 0.3s ease 0s;
+}
+.section__hero .hero__body .hero__button a:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/*------------- Content section -----------------------*/
+.content__block {
+  margin-top: clamp(30px, 4vw, 75px);
+}
+.content__block p {
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: normal;
+  line-height: 160%;
+  margin-bottom: clamp(12px, 2vw, 24px);
+}
+
+.content__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 8vw, 130px);
+  align-items: center;
+  justify-content: space-between;
+}
+.content__body .content__text {
+  max-width: 538px;
+}
+.content__body .content__text .content__title {
+  font-size: clamp(24px, 4vw, 32px);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.content__body .content__img img {
+  border-radius: 32px;
+}
+
+.p-container {
+  margin-top: 64px;
+}
+.p-container p {
+  display: block;
+  margin: 0 auto;
+  max-width: 874px;
+}
+.p-container p:not(:last-child) {
+  margin-bottom: clamp(12px, 2vw, 24px);
+}
+
 /*=========================================================================================*/
 /*---------------------------- Media queries ----------------------------------------------*/
-/*=========================================================================================*//*# sourceMappingURL=main-style.css.map */
+/*=========================================================================================*/
+@media screen and (max-width: 767.98px) {
+  .section__hero .hero__body .hero__button {
+    transform: translateY(-75px);
+  }
+  .content__body {
+    grid-template-columns: 1fr;
+  }
+  .content__body_reverse .content__img {
+    order: 2;
+  }
+}/*# sourceMappingURL=main-style.css.map */
