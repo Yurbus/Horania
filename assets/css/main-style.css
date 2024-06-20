@@ -68,7 +68,6 @@ body._lock {
 /*-------------------------------------------------*/
 .page {
   flex: 1 1 auto;
-  padding-top: 80px;
 }
 
 /*------------- Hero section -----------------------*/
@@ -143,6 +142,14 @@ body._lock {
 /*=========================================================================================*/
 /*---------------------------- Media queries ----------------------------------------------*/
 /*=========================================================================================*/
+@media screen and (min-width: 1023.98px) {
+  body._lock .wrapper {
+    padding-right: 17px;
+  }
+  body._lock .header {
+    padding-right: 17px;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .section__hero .hero__body .hero__button {
     transform: translateY(-75px);
