@@ -72,7 +72,7 @@ body._lock {
 
 /*------------- Hero section -----------------------*/
 .section__hero {
-  margin-top: 20px;
+  margin-top: 97px;
 }
 .section__hero .hero__body .media-container {
   border-radius: 32px;
@@ -81,7 +81,7 @@ body._lock {
 .section__hero .hero__body .hero__button {
   display: flex;
   justify-content: center;
-  transform: translateY(-160px);
+  transform: translateY(-290px);
 }
 .section__hero .hero__body .hero__button a {
   font-size: 16px;
