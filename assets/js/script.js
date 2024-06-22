@@ -50,10 +50,10 @@ if (iconMenu) {
 }
 
 // Получаем кнопку для прокрутки вверх
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+// var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 // Добавляем обработчик события клика на кнопку
-scrollToTopBtn.addEventListener("click", scrollToTop);
+// scrollToTopBtn.addEventListener("click", scrollToTop);
 
 // Отслеживаем прокрутку страницы
 window.onscroll = function() {
@@ -86,32 +86,32 @@ window.onscroll = function() {
 
 
 // Прокрутка при клике
-// const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-// if(menuLinks.length > 0) {
-// 	menuLinks.forEach(menuLink => {
-// 		menuLink.addEventListener("click", onMenuLinkClick);
-// 	});
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if(menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
 
-// 	function onMenuLinkClick(e) {
-// 		const menuLink = e.target;
-// 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-// 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-// 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 		
-// 			if (iconMenu.classList.contains('_active')) {
-// 				document.body.classList.remove('_lock');
-// 				iconMenu.classList.remove('_active');
-// 				menuBody.classList.remove('_active');
-// 			}
+			if (iconMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				iconMenu.classList.remove('_active');
+				menuBody.classList.remove('_active');
+			}
 
-// 			window.scrollTo({
-// 				top: gotoBlockValue,
-// 				behavior: "smooth"
-// 			});
-// 			e.preventDefault();
-// 		}
-// 	}
-// }
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
 
 
 //прикрепление файла в форме

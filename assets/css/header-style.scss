@@ -99,7 +99,6 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
   top: 95px;
   right: 0;
   background: #000;
@@ -124,8 +123,11 @@
 .header__menu .menu__list {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
   overflow: hidden;
+}
+.header__menu .menu__list li:not(:last-child) {
+  margin-bottom: 20px;
 }
 .header__menu .menu__list .menu__link {
   font-weight: 700;
@@ -133,11 +135,6 @@
   margin-bottom: 5px;
   position: relative;
   width: 100%;
-}
-.header__menu .menu__list .menu__link:not(:last-child) {
-  margin-bottom: 20px;
-}
-.header__menu .menu__list .menu__link a {
   color: #fff;
   font-size: 16px;
   line-height: 130%;
