@@ -66,6 +66,7 @@ body._lock {
 /*------------- Hero section -----------------------*/
 .section__hero {
 	margin-top: 97px;
+	margin-bottom: clamp(40px, 7vw, 75px);
 	.hero__body {
 		.media-container {
 			max-height: 720px;
@@ -80,13 +81,16 @@ body._lock {
 			a {
 				font-size: 16px;
 				font-weight: bold;
+				text-transform: uppercase;
 				padding: 22px 44px;
 				border-radius: 16px;
 				background: #fff;
 				transition: all 0.3s ease 0s;
 				&:hover {
-					background: #000000;
-					color: #fff;
+					background: #E1E1E1;
+				}
+				&:active {
+					background: #8E8E8E;
 				}
 			}
 		}
@@ -98,7 +102,7 @@ body._lock {
 /*------------- Content section -----------------------*/
 
 .content__block {
-	margin-top: clamp(30px, 4vw, 75px);
+	margin-bottom: clamp(40px, 9vw, 150px);
 	p {
 		font-size: clamp(14px, 4vw, 16px);
 		font-weight: normal;
@@ -121,6 +125,7 @@ body._lock {
 			margin-bottom: 24px;
 		}
 		p {
+			text-align: justify;
 			a {
 				text-decoration: underline;
 				color: #0066FF;
@@ -137,6 +142,9 @@ body._lock {
 			border-radius: 32px;
 		}
 	}
+}
+.content__body_contact{
+	align-items: flex-start;	
 }
 .form__contact {
 	position: relative;

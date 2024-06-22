@@ -42,6 +42,7 @@
   background: #000;
   padding: 14px 24px;
   width: 119px;
+  z-index: 20;
 }
 .menu__icon .text_menu {
   color: #ffffff;
