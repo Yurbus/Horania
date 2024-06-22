@@ -71,8 +71,10 @@ body._lock {
 	margin-top: 97px;
 	.hero__body {
 		.media-container {
-			border-radius: 32px;
 			max-height: 720px;
+			img {
+				border-radius: 32px;
+			}
 		}
 		.hero__button {
 			display: flex;
@@ -282,7 +284,33 @@ body._lock {
 
 }
 @media screen and (max-width: 539.98px) {
-
+	.content__body {
+		.content__img {
+			iframe {
+				height: 300px;
+				border-radius: 24px;
+			}
+			img {
+				border-radius: 24px;
+			}
+		}
+	}
+	.media-container {
+		img {
+			border-radius: 24px;
+		}
+	}
+	.section__hero {
+		.hero__body {
+			.hero__button {
+				a {
+					font-size: 14px;
+					padding: 14px 30px;
+				}
+			}
+		}
+	}
+	
 }
 @media screen and (max-width: 414.98px) {
 
