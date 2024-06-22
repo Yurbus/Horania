@@ -100,7 +100,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 95px;
+  top: 0;
   right: 0;
   background: #000;
   overflow: hidden;
@@ -109,7 +109,8 @@
   transition: all 0.2s ease 0s;
   padding: 30px;
   border-radius: 20px 0 0 20px;
-  width: 40%;
+  width: 50%;
+  height: 100vh;
 }
 .header__right._active {
   overflow: visible;
@@ -120,6 +121,7 @@
 .header__menu {
   position: relative;
   overflow-y: auto;
+  margin-top: 50px;
 }
 .header__menu .menu__list {
   display: flex;
